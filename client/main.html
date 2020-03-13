@@ -9,9 +9,24 @@
 </body>
 
 <template name="evento">
+    <table style ="border: 1px solid black;">
+        <thead>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Responsable</th>
+            <th>Fecha de inicio</th>
+            <th>Fecha de fin</th>
+            <th>Ubicación</th>
+        </thead>
+        <tbody>
+<tr>
+      
     {{#each eventsCollection}}
-    {{Nombre}} {{Descripción}} {{Responsable}} {{Fecha de inicio}} {{Fecha de fin}} {{Ubicación}}
+    <td>{{nombre}}</td> <td>{{descripción}}</td> <td>{{responsable}}</td> <td>{{fechaInicio}}</td> <td>{{fechaFin}}</td> <td>{{ubicación}}</td>
     {{/each}}
+</tr>
+</tbody>
+</table>
 </template> 
 <template name="form">
     <form>
@@ -28,6 +43,5 @@
         <label for="loc">Ubicación:</label><br>
         <input type="text" id="loc"><br>
         <input type="submit" value="Submit">
-        
       </form>
 </template> 
