@@ -1,0 +1,33 @@
+<head>
+    <title>My first app in meteor</title>
+</head>
+
+<body>
+    <h1>Using templates</h1>
+    {{> form}}
+    {{> evento}}
+</body>
+
+<template name="evento">
+    {{#each eventsCollection}}
+    {{Nombre}} {{Descripción}} {{Responsable}} {{Fecha de inicio}} {{Fecha de fin}} {{Ubicación}}
+    {{/each}}
+</template> 
+<template name="form">
+    <form>
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" ><br>
+        <label for="desc">Descripción:</label><br>
+        <input type="text" id="desc" ><br>
+        <label for="res">Responsable:</label><br>
+        <input type="text" id="res"><br>
+        <label for="date1">Fecha de inicio:</label><br>
+        <input type="text" id="date1" ><br>
+        <label for="date2">Fecha de fin:</label><br>
+        <input type="text" id="date2" ><br>
+        <label for="loc">Ubicación:</label><br>
+        <input type="text" id="loc"><br>
+        <input type="submit" value="Submit">
+        
+      </form>
+</template> 
